@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1517999342543-6e7529b1e0a9');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 48px;
+            color: #ffcc00;
+            text-shadow: 3px 3px 5px #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .back-home {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #ff6600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .back-home:hover {
+            background-color: #e65c00;
+            transform: translateY(-3px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank You!</h1>
+    <p>We appreciate your interest in our Old Bikes Price Prediction software.</p>
+    <p>If you have any feedback or queries, feel free to reach out.</p>
+    <a href="index.html" class="back-home">Back to Home</a>
+</body>
+</html>

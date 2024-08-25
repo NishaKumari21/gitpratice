@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Price Prediction Output</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://wallpaperset.com/w/full/d/8/c/185256.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff00;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 48px;
+            color: #00f2ff;
+            text-shadow: 3px 3px 5px #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+        button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            color: #ffffff;
+            background-color: #0008ff54;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #e65c00;
+            transform: translateY(-3px);
+        }
+        .button-container {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bike Price Prediction</h1>
+    <h2>Old Bikes Price Prediction <span class="bike-icon"><i class="fas fa-motorcycle"></i></span></h2>
+    <form action="{{ url_for('predict') }}" method="post">
+        <h3 id="pred">Bike 🏍 price will be around 👉 {{ prediction_text }}</h3>
+    <p>The predicted price for the selected bike is:</p>
+    <p><strong>₹{{ prediction_text }}</strong></p>
+    <div class="button-container">
+        <button onclick="location.href='about.html'">About Our Brands</button>
+        <button onclick="location.href='thankyou.html'">Thank You</button>
+        <button onclick="location.href='survey.html'">Survey</button>
+    </div>
+</body>
+</html>
